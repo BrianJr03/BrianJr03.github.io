@@ -5,7 +5,7 @@ $(document).ready(function() {
             play: '5000',
         }
     );
-    var typed = new Typed(
+    new Typed(
         ".typed", {
             strings: ["Software Engineer", "Mobile Developer", "goated af"],
             typeSpeed: 70,
