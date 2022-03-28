@@ -5,4 +5,13 @@ $(document).ready(function() {
             play: '5000',
         }
     );
+    var typed = new Typed(
+        ".typed", {
+            strings: ["Software Engineer", "Mobile Developer", "goated af"],
+            typeSpeed: 70,
+            loop: true,
+            startDelay: 1000,
+            showCursor: false
+        }
+    )
 });
