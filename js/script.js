@@ -3,7 +3,6 @@ $(document).ready(function() {
         {
             animation: 'fade',
             play: '5000',
-            pagination: false
         }
     );
 });
