@@ -33,10 +33,21 @@ $(document).ready(function() {
         }
     });
     $('.skillIcon').fadeOut();
+    $('.statsNum').fadeOut();
+    $('.aboutMeParagraph').fadeOut();
     var skillsTopOffset = $('.skillsSection').offset().top;
+    var statsTopOffset = $('.statsSection').offset().top;
+    var aboutMeTopOffset = $('.aboutMeSection').offset().top;
     $(window).on('scroll', function() {
         if (window.pageYOffset > skillsTopOffset - $(window).height() + 225) {
             $('.skillIcon').fadeIn(1500);
+        }
+        if (window.pageYOffset > statsTopOffset - $(window).height() + 90) {
+            $('.statsNum').fadeIn(1500);
+        }
+
+        if (window.pageYOffset > aboutMeTopOffset - $(window).height() + 90) {
+            $('.aboutMeParagraph').fadeIn(1500);
         }
     });
 });
