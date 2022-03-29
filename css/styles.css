@@ -82,29 +82,8 @@ a {
     margin-top: 15px;
 }
 
-.chart {
-    position: relative;
-    width: 152px;
-    height: 152px;
-    display: inline-block;
-    text-align: center;
-}
-
-.chart canvas {
-    position: absolute;
-    left: 0;
-    top: 0;
-}
-
-.chart .percent {
-    color: #000;
-    line-height: 152px;
-    display: inline-block;
-    font-size: 35px;
-}
-
-.chart .percent:after {
-    content: '%';
+.skillHeader {
+    margin-bottom: 75px;
 }
 
 .squareIcon {
