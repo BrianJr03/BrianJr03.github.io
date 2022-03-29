@@ -54,7 +54,7 @@ $(document).ready(function() {
             $('.itemsContainer').fadeIn(1500);
         }
     });
-    if(jQuery().fancybox) { $("[data-fancybox]").fancybox(); } 
+    if (jQuery().fancybox) { $("[data-fancybox]").fancybox(); } 
     $(".items").isotope({
         filter: '*',
         animationOptions: {
