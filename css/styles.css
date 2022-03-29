@@ -272,3 +272,12 @@ a {
     padding: 0;
 }
 
+.copyRightSection {
+    color: #fff;
+    background-color: #000;
+    padding: 30px 5px;
+}
+
+.copyRightSection p {
+    margin: 0;
+}
