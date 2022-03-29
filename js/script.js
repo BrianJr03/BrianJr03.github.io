@@ -34,10 +34,12 @@ $(document).ready(function() {
     });
     $('.skillIcon').fadeOut();
     $('.statsNum').fadeOut();
+    $('.itemsContainer').fadeOut();
     $('.aboutMeParagraph').fadeOut();
     var skillsTopOffset = $('.skillsSection').offset().top;
     var statsTopOffset = $('.statsSection').offset().top;
     var aboutMeTopOffset = $('.aboutMeSection').offset().top;
+    var portfolioTopOffset = $('.portfolioSection').offset().top;
     $(window).on('scroll', function() {
         if (window.pageYOffset > skillsTopOffset - $(window).height() + 225) {
             $('.skillIcon').fadeIn(1500);
@@ -47,6 +49,9 @@ $(document).ready(function() {
         }
         if (window.pageYOffset > aboutMeTopOffset - $(window).height() + 90) {
             $('.aboutMeParagraph').fadeIn(1500);
+        }
+        if (window.pageYOffset > portfolioTopOffset - $(window).height() + 90) {
+            $('.itemsContainer').fadeIn(1500);
         }
     });
     if(jQuery().fancybox) { $("[data-fancybox]").fancybox(); } 
