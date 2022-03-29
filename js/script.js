@@ -2,15 +2,15 @@ $(document).ready(function() {
     $('#slides').superslides(
         {
             animation: 'fade',
-            play: '5000',
+            play: '8500',
         }
     );
     new Typed(
         ".typed", {
             strings: ["Software Engineer", "Mobile Developer", "Flutter Advocate"],
-            typeSpeed: 70,
+            typeSpeed: 85,
             loop: true,
-            startDelay: 1000,
+            startDelay: 500,
             showCursor: false
         }
     );
