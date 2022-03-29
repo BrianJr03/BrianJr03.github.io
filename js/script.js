@@ -32,4 +32,11 @@ $(document).ready(function() {
             }
         }
     });
+    $('.skillIcon').fadeOut();
+    var skillsTopOffset = $('.skillsSection').offset().top;
+    $(window).on('scroll', function() {
+        if (window.pageYOffset > skillsTopOffset - $(window).height() + 225) {
+            $('.skillIcon').fadeIn(1500);
+        }
+    });
 });
