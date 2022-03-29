@@ -1,2 +1,2 @@
 # portfolio_webpage
-A website to showcase my projects
+A webpage to showcase my projects
