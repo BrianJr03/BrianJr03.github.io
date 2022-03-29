@@ -196,6 +196,7 @@ a {
 
 .items li img {
     width: 100%;
+    transition: all 0.2s linear, 1s;
 }
 
 .items .item {
@@ -262,3 +263,12 @@ a {
 .items .item:hover .projectLink {
    right: 0px;
 }
+
+.items .item:hover img {
+    transform: scale(1.05, 1.05);
+}
+
+.items {
+    padding: 0;
+}
+
