@@ -7,7 +7,7 @@ $(document).ready(function() {
     );
     new Typed(
         ".typed", {
-            strings: ["Software Engineer", "Mobile Developer", "goated af"],
+            strings: ["Software Engineer", "Mobile Developer", "Flutter Advocate"],
             typeSpeed: 70,
             loop: true,
             startDelay: 1000,
@@ -33,7 +33,7 @@ $(document).ready(function() {
         }
     });
     var skillsTopOffset = $('.skillsSection').offset().top;
-    $(window).scroll(function() {
+    $(window).on('scroll', function() {
         if (window.pageYOffset > skillsTopOffset - $(window).height() + 200) {
             $('.chart').easyPieChart({
                 easing: 'easeInOut',
