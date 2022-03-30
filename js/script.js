@@ -1,4 +1,18 @@
 $(window).on("load", function() {
+    fadeOutLoader();
+});
+
+$(document).ready(function() {
+    initSuperSlides();
+    initTyped();
+    initOwlCarousel();
+    initFancyBox();
+    initStickyNav();
+    setScrollFadeIn();
+    addScrollToNavBarButtonClick();
+});
+
+function fadeOutLoader() {
     $(".loader .inner").fadeOut(500, function() {
         $(".loader").fadeOut(750)
     });
@@ -10,15 +24,19 @@ $(window).on("load", function() {
             queue: false
         }
     });
-});
-$(document).ready(function() {
+}
+
+function initSuperSlides() {
     $('#slides').superslides(
         {
             animation: 'fade',
             play: '8500',
         }
     );
-    new Typed(
+}
+
+function initTyped() {
+    return new Typed(
         ".typed", {
             strings: ["Software Engineer", "Mobile Developer", "Flutter Advocate"],
             typeSpeed: 85,
@@ -27,6 +45,9 @@ $(document).ready(function() {
             showCursor: false
         }
     );
+}
+
+function initOwlCarousel() {
     $('.owl-carousel').owlCarousel({
         items: 4,
         loop: true,
@@ -47,6 +68,43 @@ $(document).ready(function() {
             }
         }
     });
+}
+
+function initFancyBox() {
+    if (jQuery().fancybox) { $("[data-fancybox]").fancybox(); } 
+    $("#filters a").click(function() {
+        $("#filters .current").removeClass("current");
+        $(this).addClass("current");
+        var selector = $(this).attr("data-filter");
+        $(".items").isotope({
+            filter: selector,
+            animationOptions: {
+                duration: 1500,
+                easing: 'linear',
+                queue: false
+            }
+        });
+        return false;
+    });
+}
+
+function initStickyNav() {
+    const nav = $("#navigation");
+    const navTop = nav.offset().top;
+    $(window).on("scroll", () => {
+        const body = $("body");
+        if ($(window).scrollTop() >= navTop) {
+            body.css("padding-top", nav.outerHeight() + "px");
+            body.addClass("fixedNav");
+        }
+        else {
+            body.css("padding-top", 0);
+            body.removeClass("fixedNav");
+        }
+    });
+}
+
+function setScrollFadeIn() {
     $('.skillIcon').fadeOut();
     $('.statsNum').fadeOut();
     $('.itemsContainer').fadeOut();
@@ -69,39 +127,13 @@ $(document).ready(function() {
             $('.itemsContainer').fadeIn(1500);
         }
     });
-    if (jQuery().fancybox) { $("[data-fancybox]").fancybox(); } 
-    $("#filters a").click(function() {
-        $("#filters .current").removeClass("current");
-        $(this).addClass("current");
-        var selector = $(this).attr("data-filter");
-        $(".items").isotope({
-            filter: selector,
-            animationOptions: {
-                duration: 1500,
-                easing: 'linear',
-                queue: false
-            }
-        });
-        return false;
-    });
+}
+
+function addScrollToNavBarButtonClick() {
     $("#navigation li a").click(function(e){
         e.preventDefault();
         var targetElement = $(this).attr("href");
         var targetPosition = $(targetElement).offset().top;
         $("html, body").animate({ scrollTop: targetPosition - 50 }, "slow");
     });
-    const nav = $("#navigation");
-    const navTop = nav.offset().top;
-    $(window).on("scroll", stickyNav);
-    function stickyNav() {
-        const body = $("body");
-        if ($(window).scrollTop() >= navTop) {
-            body.css("padding-top", nav.outerHeight() + "px");
-            body.addClass("fixedNav");
-        }
-        else {
-            body.css("padding-top", 0);
-            body.removeClass("fixedNav");
-        }
-    }
-});
+}
