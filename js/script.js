@@ -28,28 +28,22 @@ $(document).ready(function() {
         }
     );
     $('.owl-carousel').owlCarousel({
-        loop:true,
         items: 4,
+        loop:true,
+        autoplay: true,
+        autoplayTimeout: 3500,
         responsive:{
             0:{
                 items:1,
-                autoplay: true,
-                autoplayTimeout: 3500
             },
             480:{
-                items:2,
-                autoplay: true,
-                autoplayTimeout: 3500
+                items:2, 
             },
             768:{
                 items:3,
-                autoplay: true,
-                autoplayTimeout: 3500
             },
             938:{
-                items:4,
-                autoplay: true,
-                autoplayTimeout: 3500
+                items:4, 
             }
         }
     });
