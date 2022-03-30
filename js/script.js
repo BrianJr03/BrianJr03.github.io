@@ -33,15 +33,23 @@ $(document).ready(function() {
         responsive:{
             0:{
                 items:1,
+                autoplay: true,
+                autoplayTimeout: 3500
             },
             480:{
-                items:2
+                items:2,
+                autoplay: true,
+                autoplayTimeout: 3500
             },
             768:{
-                items:3
+                items:3,
+                autoplay: true,
+                autoplayTimeout: 3500
             },
             938:{
-                items:4
+                items:4,
+                autoplay: true,
+                autoplayTimeout: 3500
             }
         }
     });
