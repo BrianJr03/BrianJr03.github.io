@@ -1,6 +1,4 @@
-$(window).on("load", function() {
-    fadeOutLoader();
-});
+$(window).on("load", fadeOutLoader);
 
 $(document).ready(function() {
     initSuperSlides();
@@ -71,7 +69,7 @@ function initOwlCarousel() {
 
 function initFancyBox() {
     if (jQuery().fancybox) { $("[data-fancybox]").fancybox(); } 
-    $("#filters a").click(function() {
+    $("#filters a").on("click", function() {
         $("#filters .current").removeClass("current");
         $(this).addClass("current");
         var selector = $(this).attr("data-filter");
@@ -129,7 +127,7 @@ function setScrollFadeIn() {
 }
 
 function addScrollToNavBarButtonClick() {
-    $("#navigation li a").click(function(e){
+    $("#navigation li a").on("click", function(e) {
         e.preventDefault();
         var targetElement = $(this).attr("href");
         var targetPosition = $(targetElement).offset().top;
