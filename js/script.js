@@ -27,8 +27,7 @@ function fadeOutLoader() {
 }
 
 function initSuperSlides() {
-    $('#slides').superslides(
-        {
+    $('#slides').superslides( {
             animation: 'fade',
             play: '8500',
         }
