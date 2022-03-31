@@ -27,7 +27,7 @@ function fadeOutLoader() {
 function initSuperSlides() {
     $('#slides').superslides( {
             animation: 'fade',
-            play: '8500',
+            play: '3050',
         }
     );
 }
@@ -49,7 +49,7 @@ function initOwlCarousel() {
         items: 4,
         loop: true,
         autoplay: true,
-        autoplayTimeout: 3500,
+        autoplayTimeout: 2500,
         responsive:{
             0:{
                 items:1,
