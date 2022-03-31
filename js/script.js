@@ -37,7 +37,7 @@ function initSuperSlides() {
 function initTyped() {
     return new Typed(
         ".typed", {
-            strings: ["Software Engineer", "Mobile Developer", "Flutter Advocate"],
+            strings: ["Software Engineer", "Mobile Developer", "Determined Learner"],
             typeSpeed: 85,
             loop: true,
             startDelay: 500,
