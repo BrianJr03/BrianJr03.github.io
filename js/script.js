@@ -35,7 +35,7 @@ function initSuperSlides() {
 function initTyped() {
     return new Typed(
         ".typed", {
-            strings: ["Software Engineer", "Mobile Developer", "Determined Learner"],
+            strings: ["Software Engineer", "Mobile Developer", "Web Developer"],
             typeSpeed: 85,
             loop: true,
             startDelay: 500,
